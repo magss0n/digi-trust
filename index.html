@@ -12,7 +12,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Bahnschrift';
             line-height: 1.6;
             color: #333;
         }
@@ -77,7 +77,7 @@
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.95);
             font-size: 1rem;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Bahnschrift', sans-serif;
             transition: border-color 0.3s, transform 0.3s;
         }
 
@@ -95,8 +95,8 @@
         }
 
         .submit-button {
-            background: white;
-            color: #1e3c72;
+            background: #2a5298;
+            color: white;
             padding: 15px 40px;
             border: none;
             border-radius: 8px;
@@ -112,13 +112,16 @@
         }
         /* Navbar */
         nav {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            /* background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); */
+            background: rgba(0,0,0,0.2);
             padding: 1rem 5%;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: 8rem;
+            backdrop-filter: blur(10px);
         }
 
         .nav-container {
@@ -130,7 +133,6 @@
         }
 
         .logo {
-            font-size: 1.8rem;
             font-weight: bold;
             color: white;
             text-decoration: none;
@@ -145,6 +147,7 @@
         .nav-links a {
             color: white;
             text-decoration: none;
+            font-size: 1.2rem;
             font-weight: 500;
             transition: color 0.3s;
         }
@@ -160,12 +163,19 @@
             padding: 150px 5% 100px;
             text-align: center;
             margin-top: 60px;
+            background: url("./img.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+
+
         }
 
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            
         }
 
         .hero p {
@@ -175,11 +185,12 @@
             margin-left: auto;
             margin-right: auto;
             opacity: 0.95;
-        }
+            backdrop-filter: blur(5px);
+            animation: fadeInUp 1.5s ease;}
 
         .cta-button {
-            background: white;
-            color: #1e3c72;
+            background: #1e3c72;
+            color: white;
             padding: 15px 40px;
             border: none;
             border-radius: 50px;
@@ -370,7 +381,7 @@
         /* Contact Section */
         .contact {
             padding: 80px 5%;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #74ebd5 100%);
             color: white;
         }
 
@@ -444,7 +455,7 @@
         @media (max-width: 768px) {
             .nav-links {
                 gap: 1rem;
-                font-size: 0.9rem;
+                font-size: 1.2rem;
             }
 
             .hero h1 {
@@ -466,7 +477,85 @@
     <nav>
         <div class="nav-container">
         
-            <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.5rem;"><div style="padding: 0.5rem; background-color: #2455af; color: white; border-radius: 12px; box-shadow: 2px 4px 4px #e0e0e0;">DT</div>Digi-Trust</a>
+            <!-- <a href="#" class="logo" style="display: flex; align-items: center; gap: 0.5rem;"><div style="padding: 0.5rem; background-color: #2455af; color: white; border-radius: 12px; box-shadow: 2px 4px 4px #e0e0e0;">DT</div>Digi-Trust</a> -->
+            <svg viewBox="0 0 400 120" style="height: 100px; color: white" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2a5298;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#74ebd5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#74ebd5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Logo Icon - Digital Shield/Trust Symbol -->
+  <g transform="translate(20, 20)">
+    <!-- Outer shield -->
+    <path d="M 40 10 L 60 10 C 65 10 70 15 70 20 L 70 50 C 70 65 55 75 40 80 C 25 75 10 65 10 50 L 10 20 C 10 15 15 10 20 10 Z" 
+          fill="url(#mainGradient)" 
+          filter="url(#shadow)"/>
+    
+    <!-- Inner digital pattern -->
+    <path d="M 40 20 L 55 20 C 58 20 60 22 60 25 L 60 48 C 60 58 50 65 40 68 C 30 65 20 58 20 48 L 20 25 C 20 22 22 20 25 20 Z" 
+          fill="#ffffff" 
+          opacity="0.2"/>
+    
+    <!-- Digital "D" integrated into shield -->
+    <g transform="translate(28, 30)">
+      <!-- D shape with circuit board style -->
+      <path d="M 5 0 L 15 0 C 20 0 24 4 24 9 L 24 21 C 24 26 20 30 15 30 L 5 30 Z M 9 5 L 9 25 L 14 25 C 17 25 19 23 19 20 L 19 10 C 19 7 17 5 14 5 Z" 
+            fill="#ffffff"/>
+      
+      <!-- Circuit lines -->
+      <line x1="3" y1="10" x2="6" y2="10" stroke="#74ebd5" stroke-width="1.5"/>
+      <line x1="3" y1="20" x2="6" y2="20" stroke="#74ebd5" stroke-width="1.5"/>
+      <circle cx="3" cy="10" r="1.5" fill="#74ebd5"/>
+      <circle cx="3" cy="20" r="1.5" fill="#74ebd5"/>
+    </g>
+    
+    <!-- Trust checkmark -->
+    <path d="M 32 52 L 38 58 L 52 44" 
+          stroke="#74ebd5" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" 
+          fill="none"/>
+  </g>
+  
+  <!-- Company Name -->
+  <g transform="translate(110, 35)">
+    <!-- "Digi-Trust" text -->
+    <text x="0" y="20" font-family="'Bahnschrift', sans-serif" font-size="28" font-weight="900" fill="white">
+      Digi-Trust
+    </text>
+    
+    <!-- Underline accent -->
+    <rect x="0" y="28" width="80" height="3" fill="url(#accentGradient)" rx="1.5"/>
+    
+    <!-- Tagline -->
+    <text x="0" y="48" font-family="'Bahnschrift', sans-serif" font-size="14" font-weight="400" fill="white" letter-spacing="0.5">
+      Digital Marketing & Automation
+    </text>
+  </g>
+  
+  <!-- Small circuit pattern decoration -->
+  <g transform="translate(320, 50)" opacity="0.3">
+    <circle cx="0" cy="0" r="2" fill="#2a5298"/>
+    <line x1="0" y1="0" x2="15" y2="0" stroke="#2a5298" stroke-width="1"/>
+    <circle cx="15" cy="0" r="2" fill="#2a5298"/>
+    <line x1="15" y1="0" x2="15" y2="-10" stroke="#2a5298" stroke-width="1"/>
+    <circle cx="15" cy="-10" r="2" fill="#74ebd5"/>
+  </g>
+            </svg>
             <ul class="nav-links">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#services">Services</a></li>
